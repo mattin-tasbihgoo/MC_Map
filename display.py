@@ -10,7 +10,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
 pygame.display.set_caption("Simple Map with Movable Cursor")
 
 # Load and scale the map image
-map_image = pygame.image.load("./map.png")
+map_image = pygame.image.load("./minecraft_map.png")
 map_image = pygame.transform.scale(map_image, (WIDTH, HEIGHT))  # Ensure the map is resized to fit the canvas
 
 # Updated cursor pattern

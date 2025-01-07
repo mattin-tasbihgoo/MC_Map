@@ -436,10 +436,10 @@ if __name__ == "__main__":
     # Coordinates (latitude, longitude)
     # latitude = 42.145242  # Replace with your latitude 
     # longitude = -88.001543  # Replace with your longitude
-    latitude = 42  # Replace with your latitude
-    longitude = -88  # Replace with your longitude
+    latitude = 34.1531337  # Replace with your latitude
+    longitude = -118.4028713  # Replace with your longitude
     #42.250595, -88.050519
-    api_key = "ENTER_YOUR_GOOGLE_MAPS_API_KEY"  # Replace with your API key
+    api_key = "AIzaSyAvZo7Hs4eAo0D35lNeuIpYtPY_NU-0sSE"  # Replace with your API key
 
     final_image = generate_minecraft_map(latitude, longitude, api_key)
     if final_image:

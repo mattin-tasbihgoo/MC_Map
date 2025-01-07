@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head><title>Get Location</title></head>
+<body>
+<p id="coords"></p>
+
+<script>
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const lat = pos.coords.latitude;
+        const lng = pos.coords.longitude;
+        document.getElementById('coords').textContent = 
+          `Latitude: ${lat}, Longitude: ${lng}`;
+        
+        // Optionally send to a local server (Python) via fetch:
+        fetch('http://127.0.0.1:5000/location', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ latitude: lat, longitude: lng })
+        })
+        .then(response => response.text())
+        .then(data => console.log('Server response:', data));
+      },
+      (err) => {
+        console.error(err);
+      }
+    );
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+
+// Call getLocation when the page loads
+window.onload = getLocation;
+</script>
+</body>
+</html>

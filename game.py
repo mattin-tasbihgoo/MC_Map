@@ -10,7 +10,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Pixelated Reveal Map with Movable Cursor")
 
 # Load and scale the map image
-map_image = pygame.image.load("./map.png")
+map_image = pygame.image.load("output\minecraft_map.png")
 map_image = pygame.transform.scale(map_image, (WIDTH, HEIGHT))
 
 # Create a fog surface to cover the entire map
